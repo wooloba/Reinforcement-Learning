@@ -6,7 +6,10 @@ The content includes:
 A Gambler's problem is described in the book as such:  
     A gambler has the opportunity to make bets on the outcomes of a sequence of coin ﬂips. If the coin comes up heads, he wins as many dollars as he has staked on that ﬂip; if it is tails, he loses his stake. The game ends when the gambler wins by reaching his goal of $100, or loses by running out of money. On each ﬂip, the gambler must decide what portion of his capital to stake, in integer numbers of dollars.
     
+2. Windy Grid world is implemented by Sarsa Algorithm which is also knwon as TD(temporal difference learning)
 
+    a Windy world is described in the book as such:
+    
 
 
 
