@@ -1,6 +1,7 @@
 # Reinforcement-Learning
 
-This repo shows the track of me learning reinforcement learning. I learn by reading the book of Reinforcement Learning written by Richard Sutton. To enforce my knowledge, I solved some problems in the book and implement algorithms described in the book to solve small games/puzzles. 
+This repo shows the track of me learning reinforcement learning. I learn by reading the book of Reinforcement Learning written by Richard Sutton. To enforce my knowledge, I solved some problems in the book and implement algorithms described in the book to solve small games/puzzles.
+
 The content includes:
 1. Gambler's problem implemented by on-policy Monte Carlo Control with exploring starts for action values.
     A Gambler's problem is described in the book as such:  
@@ -13,6 +14,10 @@ The content includes:
 
 3. Maze is a modified version of Windy Grid World which looks like the following image and with no wind. The maze is solved by Dyna-Q agent. The task for agent is to travel from S to G as quickly as possible.![image-20180908224340457](/var/folders/yx/5ngc1rg53qn0zj53trvqhfzr0000gn/T/abnerworks.Typora/image-20180908224340457.png)
 
+4. Random walk is implemented by three different agents based on TD(0). They are Tabular agent; tile coding agent; state aggregation agent.
+
+Random walk is described in the book as such:
+    All episodes start in the center state, C, and proceed either left or right by one state on each step, with equal probability. Episodes terminate either on the extreme left or the extreme right. When an episode terminates on the right, a reward of +1 occurs; all other rewards are zero.
 
 
 Reinforcement learning is my entrance to ML/DL. Some concepts in Reinforcement Learning share with ML/DL. The interface of User-Agent make me feel comfortable to learn the idea of RL beside complex Math. The algorithms in the book is not very hard to understand and to implement. Therefore after reading this book, I deside to explore more in AI area.
