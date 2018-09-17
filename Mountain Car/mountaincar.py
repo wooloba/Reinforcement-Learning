@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
 """
-  Author: Adam White, Mohammad M. Ajallooeian, Sina Ghiassian
-  Purpose: for use of Reinforcement learning course University of Alberta Fall 2017
-
+  Author: Yaozhi Lu
+  
 """
 
 from utils import rand_norm, rand_in_range, rand_un
@@ -15,7 +14,7 @@ def env_init():
     global current_state, start, num_total_states
 
 def env_start():
-    """ returns numpy array """
+    #initiating environment variables 
     global current_state
 
     x = np.random.uniform(-0.6,-0.4)
@@ -74,18 +73,7 @@ def bound_xdot(xdot):
 
 
 def env_cleanup():
-    #
     return
 
 def env_message(in_message): # returns string, in_message: string
-    """
-    Arguments
-    ---------
-    inMessage : string
-        the message being passed
-
-    Returns
-    -------
-    string : the response to the message
-    """
     return ""

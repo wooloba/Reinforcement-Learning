@@ -1,7 +1,6 @@
 """
-  Author: Adam White, Matthew Schlegel, Mohammad M. Ajallooeian, Sina Ghiassian
-  Purpose: Skeleton code for Monte Carlo Exploring Starts Control Agent
-           for use on A3 of Reinforcement learning course University of Alberta Fall 2017
+  Author: Yaozhi Lu
+
 """
 
 from utils import rand_in_range, rand_un
@@ -16,31 +15,17 @@ lam = 0.9
 weight_size = 4096
 
 def agent_init():
-    """
-    Hint: Initialize the variables that need to be reset before each run begins
-    Returns: nothing
-    """
     # input policy here
     global policy,w
-
     #the size of weight may need to be modified
     w = np.random.uniform(-0.001,0.0,weight_size)
-
     return
 
 
 
 def agent_start(state):
-    """
-    Hint: Initialize the variavbles that you want to reset before starting a new episode
-    Arguments: state: numpy array
-    Returns: action: integer
-    """
-    # pick the first action, don't forget about exploring starts
     global agent_last_state,agent_last_action,w,z
-
     #since epsilon is zero in this case, agent dose not explore
-
 
     action = chooseAction(state)
     z = np.zeros(weight_size)
@@ -54,7 +39,7 @@ def agent_start(state):
     return action
 
 
-def agent_step(reward, state):  # returns NumPy array, reward: floating point, this_observation: NumPy array
+def agent_step(reward, state):  
     """
     Arguments: reward: floting point, state: integer
     Returns: action: integer
@@ -106,21 +91,11 @@ def agent_end(reward):
 
 
 def agent_cleanup():
-    """
-    This function is not used
-    """
     # clean up
-
     return
 
 
-def agent_message(in_message):  # returns string, in_message: string
-    """
-    Arguments: in_message: string
-    returns: The value function as a string.
-    This function is complete. You do not need to add code here.
-    """
-    # should not need to modify this function. Modify at your own risk
+def agent_message(in_message):  
     if (in_message == 'ValueFunction'):
         print(w)
         pos_max = 0.5
