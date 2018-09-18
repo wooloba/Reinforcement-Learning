@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 
 """
-  Author: Adam White, Mohammad M. Ajallooeian, Sina Ghiassian
-  Purpose: Code for the Gambler's problem environment from the Sutton and Barto
-  Reinforcement Learning: An Introduction Chapter 4.
-  For use in the Reinforcement Learning course, Fall 2017, University of Alberta 
+  Author: Yaozhi Lu
+  
 """
 
 from utils import rand_norm, rand_in_range, rand_un
@@ -20,7 +18,6 @@ def env_init():
 
 
 def env_start():
-    """ returns numpy array """
     global current_state
 
     state = rand_in_range(num_total_states) + 1 # This is required for exploring starts
@@ -28,18 +25,6 @@ def env_start():
     return current_state
 
 def env_step(action):
-    """
-    Arguments
-    ---------
-    action : int
-        the action taken by the agent in the current state
-
-    Returns
-    -------
-    result : dict
-        dictionary with keys {reward, state, isTerminal} containing the results
-        of the action taken
-    """
     global current_state
     if action < 1 or action > np.minimum(current_state[0], num_total_states + 1 - current_state[0]):
         print "Invalid action taken!!"
@@ -67,18 +52,8 @@ def env_step(action):
     return result
 
 def env_cleanup():
-    #
+    #clean up
     return
 
 def env_message(in_message): # returns string, in_message: string
-    """
-    Arguments
-    ---------
-    inMessage : string
-        the message being passed
-
-    Returns
-    -------
-    string : the response to the message
-    """
     return ""
