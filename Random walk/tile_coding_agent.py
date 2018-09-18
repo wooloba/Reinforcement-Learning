@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 
 """
-  Author: Adam White, Matthew Schlegel, Mohammad M. Ajallooeian, Sina Ghiassian
-  Purpose: Skeleton code for Monte Carlo Exploring Starts Control Agent
-           for use on A3 of Reinforcement learning course University of Alberta Fall 2017
-
+  Author: Yaozhi Lu
+  
 """
 
 from utils import random_policy,rand_in_range, rand_un
@@ -16,10 +14,6 @@ alpha = 0.01/50
 gama = 1.0
 iht = IHT((1/0.2+1)*(1/0.2+1)*50)
 def agent_init():
-    """
-    Hint: Initialize the variables that need to be reset before each run begins
-    Returns: nothing
-    """
     # input policy here
     global policy,w,V
 
@@ -30,11 +24,6 @@ def agent_init():
 
 
 def agent_start(state):
-    """
-    Hint: Initialize the variavbles that you want to reset before starting a new episode
-    Arguments: state: numpy array
-    Returns: action: integer
-    """
     # pick the first action, don't forget about exploring starts
     global agent_last_state,w
 
@@ -46,10 +35,6 @@ def agent_start(state):
 
 
 def agent_step(reward, state):  # returns NumPy array, reward: floating point, this_observation: NumPy array
-    """
-    Arguments: reward: floting point, state: integer
-    Returns: action: integer
-    """
     global w,V,agent_last_state
 
     #last affected states list
@@ -84,10 +69,6 @@ def agent_step(reward, state):  # returns NumPy array, reward: floating point, t
 
 
 def agent_end(reward):
-    """
-    Arguments: reward: floating point
-    Returns: Nothing
-    """
     # do learning and update pi
     global w,V,agent_last_state
 
@@ -113,20 +94,13 @@ def agent_end(reward):
 
 
 def agent_cleanup():
-    """
-    This function is not used
-    """
+
 
     # clean up
     return
 
 
 def agent_message(in_message):  # returns string, in_message: string
-    """
-    Arguments: in_message: string
-    returns: The value function as a string.
-    This function is complete. You do not need to add code here.
-    """
     # should not need to modify this function. Modify at your own risk
     if (in_message == 'ValueFunction'):
         return
