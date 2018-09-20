@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 
 """
-  Author: Adam White, Matthew Schlegel, Mohammad M. Ajallooeian, Andrew
-  Jacobsen, Victor Silva, Sina Ghiassian
-  Purpose: Implementation of the interaction between the Gambler's problem environment
-  and the Monte Carlon agent using RL_glue. 
-  For use in the Reinforcement Learning course, Fall 2017, University of Alberta
-
+  Author: Yaozhi Lu
 """
 from rl_glue import *  # Required for RL-Glue
 import matplotlib.pyplot as plt
